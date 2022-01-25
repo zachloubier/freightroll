@@ -9,6 +9,15 @@ $ rails db:seed
 $ rails server
 ```
 
+## Viewing Different Screens
+
+Once the rails server is running, you can navigate to localhost:3000 to view the initial screen to request an SMS code.
+The form will submit data to the API via an AJAX call, but I was not able to get the view to change and move on to the next screen.
+
+The following screen to verify the SMS code is located at localhost:3000/verify. Again the form will submit the data via an AJAX call, but will not update the view and move to the next screen.
+
+The final screen to submit a job is located at localhost:3000/job. Same thing here as with the previous screens.
+
 ## API Routes
 
 ### Request SMS Code
