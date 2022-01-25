@@ -1,10 +1,19 @@
 # README
 
-# API Routes
+## Getting started
+
+```
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+$ rails server
+```
+
+## API Routes
 
 ### Request SMS Code
 
-`POST /api/auth/requestsms`
+Url: `POST /api/auth/requestsms`
 
 ```
 payload: {
@@ -28,7 +37,7 @@ response: {
 
 ### Verify SMS Code
 
-`POST /api/auth/verifysms`
+Url: `POST /api/auth/verifysms`
 
 ```
 payload: {
@@ -58,7 +67,7 @@ response: {
 
 ### Submit Job
 
-`POST /api/job`
+Url: `POST /api/job`
 
 ```
 payload: {
@@ -88,3 +97,8 @@ response: {
 	errors: string[] // Array of error messages encounted
 }
 ```
+
+
+## Test Plan for Screen 3
+
+This screen will accept the input from the driver, enter the information in the database in the jobs table. The job will be related to the driver through a db association and foreign key driver_id
