@@ -1,4 +1,10 @@
 class IndexController < ApplicationController
-	def index
+	def request_sms
+	end
+
+	def verify_sms
+	end
+
+	def submit_job
 	end
 end

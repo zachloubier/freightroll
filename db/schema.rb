@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_234759) do
+ActiveRecord::Schema.define(version: 2022_01_25_035548) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -21,4 +21,15 @@ ActiveRecord::Schema.define(version: 2022_01_24_234759) do
     t.index ["phone"], name: "index_drivers_on_phone", unique: true
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.string "reference_number"
+    t.string "company_name"
+    t.integer "driver_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.index ["driver_id"], name: "index_jobs_on_driver_id"
+  end
+
+  add_foreign_key "jobs", "drivers"
 end

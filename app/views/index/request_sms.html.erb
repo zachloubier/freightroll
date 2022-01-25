@@ -1,0 +1,9 @@
+<h1>Request SMS Code</h1>
+
+<%= form_with url: '/api/auth/requestsms', id: "request-sms-form", format: 'json', local: false do |form| %>
+	<div>
+		<label>Phone</label>
+		<%= form.text_field :phone %>
+	</div>
+	<%= form.submit "Request SMS Code"%>
+<% end %>

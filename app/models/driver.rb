@@ -1,4 +1,6 @@
 class Driver < ApplicationRecord
+	has_many :jobs
+
 	def send_sms_code
 		return false if phone == nil
 

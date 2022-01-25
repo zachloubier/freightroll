@@ -1,0 +1,13 @@
+<h1>Verify SMS Code</h1>
+
+<%= form_with url: '/api/auth/verifysms', id: "verify-sms-form", format: 'json', local: false do |form| %>
+	<div>
+		<label>Phone</label>
+		<%= form.text_field :phone %>
+	</div>
+	<div>
+		<label>SMS Code</label>
+		<%= form.text_field :sms_code %>
+	</div>
+	<%= form.submit "Submit" %>
+<% end %>

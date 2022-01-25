@@ -1,0 +1,17 @@
+<h1>Submit Job</h1>
+
+<%= form_with url: '/api/job', id: "submit-reference-form", format: 'json', local: false do |form| %>
+	<div>
+		<label>Name</label>
+		<%= form.text_field :name %>
+	</div>
+	<div>
+		<label>Company Name</label>
+		<%= form.text_field :company_name %>
+	</div>
+	<div>
+		<label>Reference #</label>
+		<%= form.text_field :reference_number %>
+	</div>
+	<%= form.submit "Submit" %>
+<% end %>
